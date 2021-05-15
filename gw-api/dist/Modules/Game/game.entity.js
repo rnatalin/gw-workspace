@@ -46,7 +46,7 @@ __decorate([
     __metadata("design:type", String)
 ], Game.prototype, "sub_img", void 0);
 __decorate([
-    typeorm_1.Column({ default: 0 }),
+    typeorm_1.Column({ nullable: true }),
     __metadata("design:type", Number)
 ], Game.prototype, "cat", void 0);
 __decorate([

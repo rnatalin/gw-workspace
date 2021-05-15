@@ -3142,7 +3142,7 @@
         "affectsGlobalScope": false
       },
       "../src/Modules/Game/game.entity.ts": {
-        "version": "816c02ee9fb67f22021ae6c682ce47c483421cbc9384e28cf6039725d3c9cab9",
+        "version": "79122acddb5f52aabcff608dee90cfa1bce2b9379e2877e4d0b45d0fca7ca96b",
         "signature": "5b95ccd58e54039eca2be90a3ceb92d7c7432cdd98453c3177a892421d1f8741",
         "affectsGlobalScope": false
       },

@@ -26,7 +26,7 @@ export class Game {
   @Column({default: 0})
   sub_img: string;
 
-  @Column({default: 0})
+  @Column({nullable: true})
   cat: number;
 
   @Column({default: 0})
