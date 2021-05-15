@@ -19,4 +19,19 @@ export class Game {
 
   @Column()
   isPublished: boolean;
+
+  @Column({default: 0})
+  main: string;
+
+  @Column({default: 0})
+  sub: string;
+
+  @Column({default: 0})
+  cat: number;
+
+  @Column({default: 0})
+  platforms: string;
+
+  @Column({default: false})
+  stats: boolean;
 }

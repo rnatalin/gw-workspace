@@ -37,6 +37,26 @@ __decorate([
     typeorm_1.Column(),
     __metadata("design:type", Boolean)
 ], Game.prototype, "isPublished", void 0);
+__decorate([
+    typeorm_1.Column({ default: 0 }),
+    __metadata("design:type", String)
+], Game.prototype, "main", void 0);
+__decorate([
+    typeorm_1.Column({ default: 0 }),
+    __metadata("design:type", String)
+], Game.prototype, "sub", void 0);
+__decorate([
+    typeorm_1.Column({ default: 0 }),
+    __metadata("design:type", Number)
+], Game.prototype, "cat", void 0);
+__decorate([
+    typeorm_1.Column({ default: 0 }),
+    __metadata("design:type", String)
+], Game.prototype, "platforms", void 0);
+__decorate([
+    typeorm_1.Column({ default: false }),
+    __metadata("design:type", Boolean)
+], Game.prototype, "stats", void 0);
 Game = __decorate([
     typeorm_1.Entity()
 ], Game);

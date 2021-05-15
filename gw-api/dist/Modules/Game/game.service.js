@@ -28,7 +28,12 @@ let GameService = class GameService {
             "description": data.description,
             "filename": data.filename,
             "views": data.views,
-            "isPublished": data.isPublished
+            "isPublished": data.isPublished,
+            "main": data.main_img,
+            "sub": data.sub_img,
+            "cat": data.cat_id,
+            "platforms": data.platforms,
+            "stats": data.stats
         });
         return this.gameRepository.save(create);
     }

@@ -5,4 +5,9 @@ export declare class Game {
     filename: string;
     views: number;
     isPublished: boolean;
+    main: string;
+    sub: string;
+    cat: number;
+    platforms: string;
+    stats: boolean;
 }

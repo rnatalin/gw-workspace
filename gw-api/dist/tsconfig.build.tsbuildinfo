@@ -2847,7 +2847,7 @@
         "affectsGlobalScope": false
       },
       "../src/Modules/Categories/categories.entity.ts": {
-        "version": "6854a4099d1c4f2f985ce76050c073fa788f066b2410a862386af215685d429e",
+        "version": "b8b42e268f343dd65486df59de4f352dcbb0090effccec00094cc6840daf936c",
         "signature": "5fc241869ad9e3fcc15a897abcccc8a8dfdfaf7634cb78df410c27f40a329919",
         "affectsGlobalScope": false
       },
@@ -3142,12 +3142,12 @@
         "affectsGlobalScope": false
       },
       "../src/Modules/Game/game.entity.ts": {
-        "version": "936145bc435fec288483ad4816a36d4dfad5bd3fac2a52f76e78bbb804f08ef3",
-        "signature": "c3b0646a9ed285ea88b6e2e9f7b3945bdd28a2f599da833fdf00ddf37f3893a9",
+        "version": "97e37dd2bd48eb12bf8f23016b91c25e19fef6fc03963e87e3859f3fc81a1921",
+        "signature": "5f28e95c78475a81942b38ca6d0c18298ae0b3dde31a16d87cee31871758d1e1",
         "affectsGlobalScope": false
       },
       "../src/Modules/Game/game.service.ts": {
-        "version": "c02cd45bda605a1d25eba05082a3b188f807829617bf935e819c25a2982f5b7a",
+        "version": "d60e1bc99f4fdeef8ab0088b3e91a922f59a00232784d5c957360554bb287d88",
         "signature": "15449d9eb81b5ab0dac5af0b46a8915888747d0ccff913c0d71e9ed7d7cbbf22",
         "affectsGlobalScope": false
       },

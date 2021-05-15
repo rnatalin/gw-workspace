@@ -16,4 +16,5 @@ export class Category {
 
   @Column()
   popularity: number;
+
 }
