@@ -20,7 +20,7 @@ export class UserService {
       "password": data.password,
       "access": data.access,
       "status": data.status,
-      "profile_pic": data.profile_pic
+      "profilePic": data.profile_pic
 
     });
     return this.userRepository.save(create);

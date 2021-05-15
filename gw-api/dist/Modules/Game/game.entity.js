@@ -8,10 +8,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var Game_1;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Game = void 0;
 const typeorm_1 = require("typeorm");
-let Game = class Game {
+const categories_entity_1 = require("../Categories/categories.entity");
+let Game = Game_1 = class Game {
 };
 __decorate([
     typeorm_1.PrimaryGeneratedColumn(),
@@ -40,15 +42,11 @@ __decorate([
 __decorate([
     typeorm_1.Column({ default: 0 }),
     __metadata("design:type", String)
-], Game.prototype, "main_img", void 0);
+], Game.prototype, "mainImg", void 0);
 __decorate([
     typeorm_1.Column({ default: 0 }),
     __metadata("design:type", String)
-], Game.prototype, "sub_img", void 0);
-__decorate([
-    typeorm_1.Column({ nullable: true }),
-    __metadata("design:type", Number)
-], Game.prototype, "cat", void 0);
+], Game.prototype, "subImg", void 0);
 __decorate([
     typeorm_1.Column({ default: 0 }),
     __metadata("design:type", String)
@@ -57,7 +55,14 @@ __decorate([
     typeorm_1.Column({ default: false }),
     __metadata("design:type", Boolean)
 ], Game.prototype, "stats", void 0);
-Game = __decorate([
+__decorate([
+    typeorm_1.ManyToMany(category => categories_entity_1.Category, game => Game_1, {
+        eager: true
+    }),
+    typeorm_1.JoinTable(),
+    __metadata("design:type", Object)
+], Game.prototype, "categories", void 0);
+Game = Game_1 = __decorate([
     typeorm_1.Entity()
 ], Game);
 exports.Game = Game;

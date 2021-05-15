@@ -15,6 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.GameService = void 0;
 const common_1 = require("@nestjs/common");
 const typeorm_1 = require("typeorm");
+const categories_entity_1 = require("../Categories/categories.entity");
 let GameService = class GameService {
     constructor(gameRepository) {
         this.gameRepository = gameRepository;
@@ -29,11 +30,11 @@ let GameService = class GameService {
             "filename": data.filename,
             "views": data.views,
             "isPublished": data.isPublished,
-            "main_img": data.main_img,
-            "sub_img": data.sub_img,
-            "cat": data.cat_id,
+            "mainImg": data.main_img,
+            "subImg": data.sub_img,
             "platforms": data.platforms,
-            "stats": data.stats
+            "stats": data.stats,
+            "categories": categories_entity_1.Category['id']
         });
         return this.gameRepository.save(create);
     }

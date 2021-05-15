@@ -1,4 +1,5 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, JoinTable, ManyToMany } from 'typeorm';
+import {Game} from '../Game/game.entity'
 
 @Entity()
 export class Category {
@@ -16,5 +17,6 @@ export class Category {
 
   @Column()
   popularity: number;
+
 
 }

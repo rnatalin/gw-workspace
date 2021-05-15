@@ -2846,8 +2846,13 @@
         "signature": "a7ad670f373dd5665c73c7dc09a8e28b976a63bd7ed08def7c1c13456e87d3dc",
         "affectsGlobalScope": false
       },
+      "../src/Modules/Game/game.entity.ts": {
+        "version": "538533d41d03944925e3a6d80fc53b4e3375396190e00b47713222f80d04b70b",
+        "signature": "586eefe9ba7b08e578beb59c48a3662e2b8082bbe327bed431a8d2617296c4ea",
+        "affectsGlobalScope": false
+      },
       "../src/Modules/Categories/categories.entity.ts": {
-        "version": "b8b42e268f343dd65486df59de4f352dcbb0090effccec00094cc6840daf936c",
+        "version": "308a6e98413a55a566c3e2d9c0091e19d2894099e13a446a118df913a2f3e944",
         "signature": "5fc241869ad9e3fcc15a897abcccc8a8dfdfaf7634cb78df410c27f40a329919",
         "affectsGlobalScope": false
       },
@@ -3141,13 +3146,8 @@
         "signature": "4c8b1a9ee76fcb7fa41873710fed2c8f33f3e63cffb215eae10198e97fef0b31",
         "affectsGlobalScope": false
       },
-      "../src/Modules/Game/game.entity.ts": {
-        "version": "79122acddb5f52aabcff608dee90cfa1bce2b9379e2877e4d0b45d0fca7ca96b",
-        "signature": "5b95ccd58e54039eca2be90a3ceb92d7c7432cdd98453c3177a892421d1f8741",
-        "affectsGlobalScope": false
-      },
       "../src/Modules/Game/game.service.ts": {
-        "version": "1bc43210b4914517b0241b5aa543df3b78b26eba306ce8ea0c0b7a49fb7bf34e",
+        "version": "fcb15774545b29daca13e076428dfba9176a932d2bde3c03cf241619a3aa9d64",
         "signature": "15449d9eb81b5ab0dac5af0b46a8915888747d0ccff913c0d71e9ed7d7cbbf22",
         "affectsGlobalScope": false
       },
@@ -3167,12 +3167,12 @@
         "affectsGlobalScope": false
       },
       "../src/Modules/Users/user.entity.ts": {
-        "version": "37c1e4b148c50171c08345411ae79ce104ca6af911d448bfd2ddc713345abb5a",
-        "signature": "967efe11db15e7f076a3ccb7e27f91f04eb8e2009fda65afc382719c425e0501",
+        "version": "5e149ec41a56b32b828b2d5b2e970e19ce8a296026db64e798d7874c36ab4565",
+        "signature": "f4946aed469a7ea2b60fe6418f4dcddda35cd95e45cb049bc0afb8874cd67edc",
         "affectsGlobalScope": false
       },
       "../src/Modules/Users/user.service.ts": {
-        "version": "3a063e2f4092e681884c8a9a5cbdf211a03063ac891219ce724620a7e1a1ce09",
+        "version": "d4c3b10b253c563f5219ab47759834895bd5e72a9ee1bf658b6de6fea3c3dabd",
         "signature": "88c95959569e6bc67fbfd9105b5fda9bcd6bdd24400918db2c36b1cfb41f30fd",
         "affectsGlobalScope": false
       },
@@ -6000,7 +6000,8 @@
         "../src/Modules/Categories/categories.service.ts"
       ],
       "../src/Modules/Categories/categories.entity.ts": [
-        "../node_modules/typeorm/index.d.ts"
+        "../node_modules/typeorm/index.d.ts",
+        "../src/Modules/Game/game.entity.ts"
       ],
       "../src/Modules/Categories/categories.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -6025,7 +6026,8 @@
         "../src/Modules/Game/game.service.ts"
       ],
       "../src/Modules/Game/game.entity.ts": [
-        "../node_modules/typeorm/index.d.ts"
+        "../node_modules/typeorm/index.d.ts",
+        "../src/Modules/Categories/categories.entity.ts"
       ],
       "../src/Modules/Game/game.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -6041,6 +6043,7 @@
       "../src/Modules/Game/game.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/typeorm/index.d.ts",
+        "../src/Modules/Categories/categories.entity.ts",
         "../src/Modules/Game/game.entity.ts"
       ],
       "../src/Modules/Users/user.controller.ts": [
@@ -8534,6 +8537,9 @@
         "../node_modules/@types/express/index.d.ts",
         "../src/Modules/Game/game.entity.ts",
         "../src/Modules/Game/game.service.ts"
+      ],
+      "../src/Modules/Game/game.entity.ts": [
+        "../src/Modules/Categories/categories.entity.ts"
       ],
       "../src/Modules/Game/game.providers.ts": [
         "../node_modules/typeorm/index.d.ts",

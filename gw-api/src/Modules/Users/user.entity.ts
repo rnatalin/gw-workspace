@@ -21,6 +21,6 @@ export class User {
   status: boolean;
 
   @Column({default: 0})
-  profile_pic: string;
+  profilePic: string;
 
 }
