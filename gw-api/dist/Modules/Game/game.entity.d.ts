@@ -5,8 +5,8 @@ export declare class Game {
     filename: string;
     views: number;
     isPublished: boolean;
-    main: string;
-    sub: string;
+    main_img: string;
+    sub_img: string;
     cat: number;
     platforms: string;
     stats: boolean;

@@ -21,10 +21,10 @@ export class Game {
   isPublished: boolean;
 
   @Column({default: 0})
-  main: string;
+  main_img: string;
 
   @Column({default: 0})
-  sub: string;
+  sub_img: string;
 
   @Column({default: 0})
   cat: number;

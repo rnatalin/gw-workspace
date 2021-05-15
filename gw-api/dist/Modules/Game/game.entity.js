@@ -40,11 +40,11 @@ __decorate([
 __decorate([
     typeorm_1.Column({ default: 0 }),
     __metadata("design:type", String)
-], Game.prototype, "main", void 0);
+], Game.prototype, "main_img", void 0);
 __decorate([
     typeorm_1.Column({ default: 0 }),
     __metadata("design:type", String)
-], Game.prototype, "sub", void 0);
+], Game.prototype, "sub_img", void 0);
 __decorate([
     typeorm_1.Column({ default: 0 }),
     __metadata("design:type", Number)

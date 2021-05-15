@@ -12,11 +12,12 @@ const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
 const categories_module_1 = require("./Modules/Categories/categories.module");
 const game_module_1 = require("./Modules/Game/game.module");
+const user_module_1 = require("./Modules/Users/user.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     common_1.Module({
-        imports: [game_module_1.GameModule, categories_module_1.CategoryModule],
+        imports: [game_module_1.GameModule, categories_module_1.CategoryModule, user_module_1.UserModule,],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
     })

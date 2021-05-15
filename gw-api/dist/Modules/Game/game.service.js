@@ -29,8 +29,8 @@ let GameService = class GameService {
             "filename": data.filename,
             "views": data.views,
             "isPublished": data.isPublished,
-            "main": data.main_img,
-            "sub": data.sub_img,
+            "main_img": data.main_img,
+            "sub_img": data.sub_img,
             "cat": data.cat_id,
             "platforms": data.platforms,
             "stats": data.stats
