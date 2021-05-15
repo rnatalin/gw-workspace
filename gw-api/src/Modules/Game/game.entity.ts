@@ -21,19 +21,19 @@ export class Game {
   @Column()
   isPublished: boolean;
 
-  @Column({default: 0})
+  @Column({nullable: true})
   mainImg: string;
 
-  @Column({default: 0})
+  @Column({nullable: true})
   subImg: string;
 
  // @Column({nullable: true})
   //cat: number;
 
-  @Column({default: 0})
+  @Column({nullable: true})
   platforms: string;
 
-  @Column({default: false})
+  @Column({nullable: true})
   stats: boolean;
 
   @ManyToMany(category => Category, game => Game,{
