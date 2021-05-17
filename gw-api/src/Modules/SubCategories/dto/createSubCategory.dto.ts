@@ -1,4 +1,5 @@
 export class CreateSubCategoryDto {
   name: string;
-  cate;
+  description: string;
+  categoryId: number;
 }

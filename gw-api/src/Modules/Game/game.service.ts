@@ -13,7 +13,9 @@ export class GameService {
   ) {}
 
   async findAll(): Promise<Game[]> {
-    return this.gameRepository.find({ relations: [] });
+    return this.gameRepository.find({
+      relations: ['subCategories', 'subCategories.category'],
+    });
   }
 
   async createGame(data: CreateGameDto): Promise<Game> {
