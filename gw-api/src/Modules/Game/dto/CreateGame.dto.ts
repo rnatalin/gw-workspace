@@ -4,4 +4,5 @@ export class CreateGameDto {
   filename: string;
   views: number;
   isPublished: boolean;
+  categories: number[];
 }
