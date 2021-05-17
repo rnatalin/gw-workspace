@@ -5,7 +5,7 @@ import { CategoryModule } from './Modules/Categories/categories.module';
 import { GameModule } from './Modules/Game/game.module';
 
 @Module({
-  imports: [GameModule,CategoryModule],
+  imports: [GameModule, CategoryModule],
   controllers: [AppController],
   providers: [AppService],
 })

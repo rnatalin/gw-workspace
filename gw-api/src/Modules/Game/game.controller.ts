@@ -1,7 +1,9 @@
-import { Controller, Get, Param, Patch, Post, Req } from '@nestjs/common';
+import { Body, Controller, Get, Param, Patch, Post } from '@nestjs/common';
 import { Game } from './game.entity';
 import { GameService } from './game.service';
-import { Request } from 'express'
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { CreateGameDto } from './dto/CreateGame.dto';
 
 @Controller('game')
 export class GameController {
@@ -10,17 +12,19 @@ export class GameController {
   async findAll(): Promise<Game[]> {
     return this.gameService.findAll();
   }
-  @Post('create')
-  async createGame(@Req() request: Request): Promise<Game> {
-    return this.gameService.createGame(request.body);
+  @Post()
+  async createGame(@Body() CreateGameDto: CreateGameDto): Promise<Game> {
+    return this.gameService.createGame(CreateGameDto);
   }
   @Patch(':id')
-  async updateGame(@Req() request: Request, @Param('id') id: number): Promise<Game>{
-    return this.gameService.updateGame(id, request.body)
-    
+  async updateGame(
+    @Body() request: CreateGameDto,
+    @Param('id') id: number,
+  ): Promise<Game> {
+    return this.gameService.updateGame(id, request);
   }
   @Get(':id')
-  async findById(@Param('id') id: number): Promise<Game>{
-    return this.gameService.findById(id)
+  async findById(@Param('id') id: number): Promise<Game> {
+    return this.gameService.findById(id);
   }
 }
