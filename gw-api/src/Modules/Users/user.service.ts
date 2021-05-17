@@ -20,10 +20,28 @@ export class UserService {
       "password": data.password,
       "access": data.access,
       "status": data.status,
-      "profilePic": data.profile_pic
+      "profilePic": data.profilePic
 
     });
     return this.userRepository.save(create);
   }
+  async findById(id: number): Promise<User>{
+    return this.userRepository.findOne(id)
+  }
+  async updateUser(id: number, data: any): Promise<User>{
+    const user = await this.findById(id);
+    if(!user) throw new Error("Ta na disney patrao?");
+   // console.log(data)
+    user.name = data.name
+    user.email= data.email
+    user.password= data.password
+    user.access = data.access
+    user.status = data.status
+    user.profilePic = data.profilePic
+    
+  
+    return this.userRepository.save(user)
+  }
+
 
 }

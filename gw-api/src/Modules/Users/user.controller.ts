@@ -14,13 +14,13 @@ export class UserController {
   async createUser(@Req() request: Request): Promise<User> {
     return this.userService.createUser(request.body);
   }
- // @Patch(':id')
- // async updateUser(@Req() request: Request, @Param('id') id: number): Promise<User>{
- //   return this.userService.updateUser(id, request.body)
-    
-  //}
- // @Get(':id')
-  //async findById(@Param('id') id: number): Promise<User>{
- //   return this.userService.findById(id)
- // }
+ @Patch(':id')
+  async updateUser(@Req() request: Request, @Param('id') id: number): Promise<User>{
+    return this.userService.updateUser(id, request.body)
+  }
+  
+  @Get(':id')
+   async findById(@Param('id') id: number): Promise<User>{
+   return this.userService.findById(id)
+  }
 }
