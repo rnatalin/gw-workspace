@@ -11,7 +11,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
-var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.GameService = void 0;
 const common_1 = require("@nestjs/common");
@@ -55,7 +54,7 @@ let GameService = class GameService {
 GameService = __decorate([
     common_1.Injectable(),
     __param(0, common_1.Inject('GAME_REPOSITORY')),
-    __metadata("design:paramtypes", [typeof (_a = typeof typeorm_1.Repository !== "undefined" && typeorm_1.Repository) === "function" ? _a : Object])
+    __metadata("design:paramtypes", [typeorm_1.Repository])
 ], GameService);
 exports.GameService = GameService;
 //# sourceMappingURL=game.service.js.map
