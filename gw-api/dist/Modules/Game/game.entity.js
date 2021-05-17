@@ -8,12 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var Game_1;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Game = void 0;
 const typeorm_1 = require("typeorm");
-const categories_entity_1 = require("../Categories/categories.entity");
-let Game = Game_1 = class Game {
+let Game = class Game {
 };
 __decorate([
     typeorm_1.PrimaryGeneratedColumn(),
@@ -55,14 +53,7 @@ __decorate([
     typeorm_1.Column({ nullable: true }),
     __metadata("design:type", Boolean)
 ], Game.prototype, "stats", void 0);
-__decorate([
-    typeorm_1.ManyToMany(category => categories_entity_1.Category, game => Game_1, {
-        eager: true
-    }),
-    typeorm_1.JoinTable(),
-    __metadata("design:type", Object)
-], Game.prototype, "categories", void 0);
-Game = Game_1 = __decorate([
+Game = __decorate([
     typeorm_1.Entity()
 ], Game);
 exports.Game = Game;

@@ -24,7 +24,7 @@ export class GameService {
       "subImg": data.sub_img,
       "platforms": data.platforms,
       "stats": data.stats,
-      "categories": Category['id']
+
     });
     return this.gameRepository.save(create);
   }

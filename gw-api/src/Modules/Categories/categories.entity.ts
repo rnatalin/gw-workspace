@@ -1,5 +1,6 @@
-import { Entity, Column, PrimaryGeneratedColumn, JoinTable, ManyToMany } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, JoinTable, ManyToMany, OneToMany, ManyToOne } from 'typeorm';
 import {Game} from '../Game/game.entity'
+import { SubCategory } from '../SubCategory/subCategories.entity';
 
 @Entity()
 export class Category {
@@ -12,11 +13,9 @@ export class Category {
   @Column('text')
   description: string;
 
-  @Column('int')
-  games: number;
-
   @Column()
   popularity: number;
 
-
+ @ManyToOne(type=> SubCategory, categories => Category)
+ subCategory: SubCategory;
 }

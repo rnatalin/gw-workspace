@@ -1,4 +1,3 @@
-import { Category } from '../Categories/categories.entity';
 export declare class Game {
     id: number;
     name: string;
@@ -10,5 +9,4 @@ export declare class Game {
     subImg: string;
     platforms: string;
     stats: boolean;
-    categories: Category['id'];
 }

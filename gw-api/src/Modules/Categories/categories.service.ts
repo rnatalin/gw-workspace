@@ -16,7 +16,6 @@ export class CategoryService {
     const create = this.categoryRepository.create({
       "name": data.name,
       "description": data.description,
-      "games": data.games,
       "popularity": data.popularity
     });
     return this.categoryRepository.save(create);
@@ -31,7 +30,6 @@ export class CategoryService {
       // console.log(data)
       category.name = data.name
       category.description = data.description
-      category.games = data.games
       category.popularity = data.popularity
 
     

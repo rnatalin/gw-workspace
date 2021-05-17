@@ -26,7 +26,6 @@ let CategoryService = class CategoryService {
         const create = this.categoryRepository.create({
             "name": data.name,
             "description": data.description,
-            "games": data.games,
             "popularity": data.popularity
         });
         return this.categoryRepository.save(create);
@@ -40,7 +39,6 @@ let CategoryService = class CategoryService {
             throw new Error("Ta na disney patrao?");
         category.name = data.name;
         category.description = data.description;
-        category.games = data.games;
         category.popularity = data.popularity;
         return this.categoryRepository.save(category);
     }

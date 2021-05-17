@@ -1,4 +1,4 @@
-import { Entity, Column, PrimaryGeneratedColumn, ManyToMany, JoinTable } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, ManyToMany, JoinTable, JoinColumn } from 'typeorm';
 import {Category} from '../Categories/categories.entity';
 
 @Entity()
@@ -27,18 +27,11 @@ export class Game {
   @Column({nullable: true})
   subImg: string;
 
- // @Column({nullable: true})
-  //cat: number;
-
   @Column({nullable: true})
   platforms: string;
 
   @Column({nullable: true})
   stats: boolean;
 
-  @ManyToMany(category => Category, game => Game,{
-    eager: true
-  })
-  @JoinTable()
-  categories: Category['id'];
+
 }
