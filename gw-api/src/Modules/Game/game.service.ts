@@ -1,5 +1,6 @@
 import { Injectable, Inject } from '@nestjs/common';
 import { Repository } from 'typeorm';
+import { Category } from '../Categories/categories.entity';
 import { Game } from './game.entity';
 
 @Injectable()
@@ -18,7 +19,12 @@ export class GameService {
       "description": data.description,
       "filename": data.filename,
       "views": data.views,
-      "isPublished": data.isPublished
+      "isPublished": data.isPublished,
+      "mainImg": data.main_img,
+      "subImg": data.sub_img,
+      "platforms": data.platforms,
+      "stats": data.stats,
+
     });
     return this.gameRepository.save(create);
   }
@@ -35,6 +41,7 @@ export class GameService {
     game.filename = data.filename
     game.views = data.views
     game.isPublished = data.isPublished 
+    
   
     return this.gameRepository.save(game)
     //const update = this.gameRepository.update()
