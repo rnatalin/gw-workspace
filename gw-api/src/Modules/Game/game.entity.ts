@@ -1,5 +1,6 @@
 import { Entity, Column, PrimaryGeneratedColumn, ManyToMany, JoinTable, JoinColumn } from 'typeorm';
 import {Category} from '../Categories/categories.entity';
+import { SubCategory } from '../SubCategory/subCategories.entity';
 
 @Entity()
 export class Game {
@@ -33,5 +34,7 @@ export class Game {
   @Column({nullable: true})
   stats: boolean;
 
-
+  @ManyToMany(() => SubCategory)
+  @JoinTable()
+  subCategory: SubCategory;
 }

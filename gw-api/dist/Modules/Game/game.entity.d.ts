@@ -1,3 +1,4 @@
+import { SubCategory } from '../SubCategory/subCategories.entity';
 export declare class Game {
     id: number;
     name: string;
@@ -9,4 +10,5 @@ export declare class Game {
     subImg: string;
     platforms: string;
     stats: boolean;
+    subCategory: SubCategory;
 }

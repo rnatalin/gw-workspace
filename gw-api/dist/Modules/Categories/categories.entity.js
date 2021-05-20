@@ -8,12 +8,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var Category_1;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Category = void 0;
 const typeorm_1 = require("typeorm");
 const subCategories_entity_1 = require("../SubCategory/subCategories.entity");
-let Category = Category_1 = class Category {
+let Category = class Category {
 };
 __decorate([
     typeorm_1.PrimaryGeneratedColumn(),
@@ -32,10 +31,10 @@ __decorate([
     __metadata("design:type", Number)
 ], Category.prototype, "popularity", void 0);
 __decorate([
-    typeorm_1.ManyToOne(type => subCategories_entity_1.SubCategory, categories => Category_1),
-    __metadata("design:type", subCategories_entity_1.SubCategory)
-], Category.prototype, "subCategory", void 0);
-Category = Category_1 = __decorate([
+    typeorm_1.OneToMany(() => subCategories_entity_1.SubCategory, ({ category }) => category),
+    __metadata("design:type", Array)
+], Category.prototype, "subCategories", void 0);
+Category = __decorate([
     typeorm_1.Entity()
 ], Category);
 exports.Category = Category;

@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Game = void 0;
 const typeorm_1 = require("typeorm");
+const subCategories_entity_1 = require("../SubCategory/subCategories.entity");
 let Game = class Game {
 };
 __decorate([
@@ -53,6 +54,11 @@ __decorate([
     typeorm_1.Column({ nullable: true }),
     __metadata("design:type", Boolean)
 ], Game.prototype, "stats", void 0);
+__decorate([
+    typeorm_1.ManyToMany(() => subCategories_entity_1.SubCategory),
+    typeorm_1.JoinTable(),
+    __metadata("design:type", subCategories_entity_1.SubCategory)
+], Game.prototype, "subCategory", void 0);
 Game = __decorate([
     typeorm_1.Entity()
 ], Game);

@@ -7,8 +7,8 @@ import { Request } from 'express'
 export class SubCategoryController {
   constructor(private readonly subCategoryService: SubCategoryService) {}
   @Get()
-  async findAll(): Promise<SubCategory[]> {
-    return this.subCategoryService.findAll();
+  async getSubCategories(): Promise<SubCategory[]> {
+    return this.subCategoryService.getSubCategories();
   }
   @Post('create')
   async createSubCategory(@Req() request: Request): Promise<SubCategory> {

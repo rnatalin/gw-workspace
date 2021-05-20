@@ -20,13 +20,13 @@ let CategoryService = class CategoryService {
         this.categoryRepository = categoryRepository;
     }
     async findAll() {
-        return this.categoryRepository.find({ relations: [] });
+        return this.categoryRepository.find();
     }
     async createCategory(data) {
         const create = this.categoryRepository.create({
-            "name": data.name,
-            "description": data.description,
-            "popularity": data.popularity
+            name: data.name,
+            description: data.description,
+            popularity: data.popularity,
         });
         return this.categoryRepository.save(create);
     }
@@ -36,7 +36,7 @@ let CategoryService = class CategoryService {
     async updateCategory(id, data) {
         const category = await this.findById(id);
         if (!category)
-            throw new Error("Ta na disney patrao?");
+            throw new Error('Ta na disney patrao?');
         category.name = data.name;
         category.description = data.description;
         category.popularity = data.popularity;

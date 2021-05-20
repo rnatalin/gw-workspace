@@ -4,5 +4,5 @@ export declare class Category {
     name: string;
     description: string;
     popularity: number;
-    subCategory: SubCategory;
+    subCategories: SubCategory[];
 }
