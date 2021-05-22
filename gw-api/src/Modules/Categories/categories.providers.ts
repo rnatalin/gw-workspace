@@ -1,6 +1,7 @@
 import { Connection, Repository } from 'typeorm';
 import { Category } from './categories.entity';
 
+
 export const CategoryProviders = [
   {
     provide: 'CATEGORY_REPOSITORY',

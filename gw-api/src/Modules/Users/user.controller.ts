@@ -10,7 +10,7 @@ export class UserController {
   async findAll(): Promise<User[]> {
     return this.userService.findAll();
   }
-  @Post('create')
+  @Post('')
   async createUser(@Req() request: Request): Promise<User> {
     return this.userService.createUser(request.body);
   }

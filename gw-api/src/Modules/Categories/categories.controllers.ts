@@ -17,7 +17,7 @@ export class CategoryController {
   }
   @Post()
   async createCategory(@Req() request: Request): Promise<Category> {
-    return this.categoryService.createCategory(request.body);
+    return this.categoryService.createCategory(request.body)
   }
   @Get(':id')
   async findById(@Param('id') id: number): Promise<Category>{

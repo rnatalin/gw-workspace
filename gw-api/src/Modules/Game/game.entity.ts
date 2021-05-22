@@ -25,7 +25,7 @@ export class Game {
   @Column({nullable: true})
   mainImg: string;
 
-  @Column({nullable: true})
+  @Column({nullable: true })
   subImg: string;
 
   @Column({nullable: true})

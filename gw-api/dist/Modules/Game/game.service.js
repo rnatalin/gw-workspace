@@ -24,15 +24,15 @@ let GameService = class GameService {
     }
     async createGame(data) {
         const create = this.gameRepository.create({
-            "name": data.name,
-            "description": data.description,
-            "filename": data.filename,
-            "views": data.views,
-            "isPublished": data.isPublished,
-            "mainImg": data.main_img,
-            "subImg": data.sub_img,
-            "platforms": data.platforms,
-            "stats": data.stats,
+            name: data.name,
+            description: data.description,
+            filename: data.filename,
+            views: data.views,
+            isPublished: data.isPublished,
+            mainImg: data.mainImg,
+            subImg: data.subImg,
+            platforms: data.platforms,
+            stats: data.stats,
         });
         return this.gameRepository.save(create);
     }
@@ -42,12 +42,16 @@ let GameService = class GameService {
     async updateGame(id, data) {
         const game = await this.findById(id);
         if (!game)
-            throw new Error("Ta na disney patrao?");
+            throw new Error('Ta na disney patrao?');
         game.name = data.name;
         game.description = data.description;
         game.filename = data.filename;
         game.views = data.views;
         game.isPublished = data.isPublished;
+        game.mainImg = data.mainImg;
+        game.subImg = data.subImg;
+        game.platforms = data.platforms;
+        game.stats = data.stats;
         return this.gameRepository.save(game);
     }
 };

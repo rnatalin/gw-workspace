@@ -8,13 +8,14 @@ export class CategoryService {
   constructor(
     @Inject('CATEGORY_REPOSITORY')
     private categoryRepository: Repository<Category>,
-   ) {}
+  ) {}
 
   async findAll(): Promise<Category[]> {
     return this.categoryRepository.find();
   }
   async createCategory(data: CreateCategoryDto): Promise<Category> {
-      const create = this.categoryRepository.create({
+    // const subCategories = this.subCategoryService
+    const create = this.categoryRepository.create({
       name: data.name,
       description: data.description,
       popularity: data.popularity,
