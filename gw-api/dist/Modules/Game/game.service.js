@@ -15,14 +15,23 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.GameService = void 0;
 const common_1 = require("@nestjs/common");
 const typeorm_1 = require("typeorm");
+const subCategories_service_1 = require("../SubCategory/subCategories.service");
 let GameService = class GameService {
-    constructor(gameRepository) {
+    constructor(gameRepository, subCategoryService) {
         this.gameRepository = gameRepository;
+        this.subCategoryService = subCategoryService;
     }
     async findAll() {
-        return this.gameRepository.find({ relations: [] });
+        return this.gameRepository.find({
+            relations: ['subCategory', 'subCategory.category'],
+        });
     }
-    async createGame(data) {
+    async createGame(data, category) {
+        const saveSubCategories = await this.subCategoryService.getSubCategories();
+        let subCategory = [];
+        subCategory = category.map((s) => {
+            return saveSubCategories.find((sub) => sub.id);
+        });
         const create = this.gameRepository.create({
             name: data.name,
             description: data.description,
@@ -32,7 +41,8 @@ let GameService = class GameService {
             mainImg: data.mainImg,
             subImg: data.subImg,
             platforms: data.platforms,
-            stats: data.stats,
+            status: data.stats,
+            subCategory,
         });
         return this.gameRepository.save(create);
     }
@@ -51,14 +61,15 @@ let GameService = class GameService {
         game.mainImg = data.mainImg;
         game.subImg = data.subImg;
         game.platforms = data.platforms;
-        game.stats = data.stats;
+        game.status = data.stats;
         return this.gameRepository.save(game);
     }
 };
 GameService = __decorate([
     common_1.Injectable(),
     __param(0, common_1.Inject('GAME_REPOSITORY')),
-    __metadata("design:paramtypes", [typeorm_1.Repository])
+    __metadata("design:paramtypes", [typeorm_1.Repository,
+        subCategories_service_1.SubCategoryService])
 ], GameService);
 exports.GameService = GameService;
 //# sourceMappingURL=game.service.js.map

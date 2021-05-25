@@ -3151,6 +3151,11 @@
         "signature": "4c8b1a9ee76fcb7fa41873710fed2c8f33f3e63cffb215eae10198e97fef0b31",
         "affectsGlobalScope": false
       },
+      "../src/Modules/Game/game.entity.ts": {
+        "version": "9a78b432ca8421a697d2b5dc115c63c236a140303067a93d3737fae1d577008f",
+        "signature": "e7b9d250f0a83369ac3f3ba67217e3027508cd834e40b38089ca254f0bf71784",
+        "affectsGlobalScope": false
+      },
       "../src/Modules/SubCategory/dto/createSubCategory.dto.ts": {
         "version": "dc1f15f190636ffddee2a70bb340271befa8fbfdcb847aeb4877a3c0ba376b7b",
         "signature": "6440660ad2a82288bd94271532a10d829a54f00fdf1667a690bd0e04f8a9b2bf",
@@ -3159,6 +3164,21 @@
       "../src/Modules/SubCategory/subCategories.service.ts": {
         "version": "abdd41b7e5a5a9a2eea6edc7468fee1e2e9a2baceedc9c7d0d50266566f0e163",
         "signature": "b59b91f519eba7eee770d8ba30bf38813b2358e21eca31248dace50e00f7fd7e",
+        "affectsGlobalScope": false
+      },
+      "../src/Modules/Game/game.service.ts": {
+        "version": "2eb64486608eba410d0fd8628535c92920d267f0c089bd5d88b74cdb05041277",
+        "signature": "501776dddff9c99cd6e0b1558e8e1be46746ed33cd226cd6864fdd3523b5db8c",
+        "affectsGlobalScope": false
+      },
+      "../src/Modules/Game/game.controller.ts": {
+        "version": "619ec121a3918248382833981389c01ff12df2aaa519a87f6f0ed73ef025ef5c",
+        "signature": "2652b777513697d5950f8045d5a2352eea0bf62fccae9b552a5932897d1171a6",
+        "affectsGlobalScope": false
+      },
+      "../src/Modules/Game/game.providers.ts": {
+        "version": "4e212b281d2585d1d65ddcb6a2db6e44995367a39ae4af0666105866b35b9871",
+        "signature": "bdac39a9ca445621c82772818bca6a72edf8efa5fb791a03019b613217dd7d50",
         "affectsGlobalScope": false
       },
       "../src/Modules/SubCategory/subCategories.controller.ts": {
@@ -3176,28 +3196,8 @@
         "signature": "167705b72cf306c313be2f72a32f75504b7b19329441ff7b5cec165001d7de89",
         "affectsGlobalScope": false
       },
-      "../src/Modules/Game/game.entity.ts": {
-        "version": "5e48f84de37c5315487d01a8dabc8357b7533d591ef7cd0ead41d0c70356ef26",
-        "signature": "b3ceb2cf1bf07eba1e83e0f852ee958583397efb2f6463c1c6931799144d7217",
-        "affectsGlobalScope": false
-      },
-      "../src/Modules/Game/game.service.ts": {
-        "version": "904e25ec00baef37bdf2460e0c09098af35fac9083d736f826a95215aecc58a2",
-        "signature": "15449d9eb81b5ab0dac5af0b46a8915888747d0ccff913c0d71e9ed7d7cbbf22",
-        "affectsGlobalScope": false
-      },
-      "../src/Modules/Game/game.controller.ts": {
-        "version": "95590a2220e918eff4c30249fa28791e82b4dd22fbf1a8eb7fc8d3475016502b",
-        "signature": "2652b777513697d5950f8045d5a2352eea0bf62fccae9b552a5932897d1171a6",
-        "affectsGlobalScope": false
-      },
-      "../src/Modules/Game/game.providers.ts": {
-        "version": "4e212b281d2585d1d65ddcb6a2db6e44995367a39ae4af0666105866b35b9871",
-        "signature": "bdac39a9ca445621c82772818bca6a72edf8efa5fb791a03019b613217dd7d50",
-        "affectsGlobalScope": false
-      },
       "../src/Modules/Game/game.module.ts": {
-        "version": "5322abfdf9bcccffd785774883e7b242ab773fff429731ec502dd0c136e1bb55",
+        "version": "8f59e1319a33733bcf8fde517ccae0a5d4415255feddf13871df5074e3e9c33b",
         "signature": "07d63801eb6862461cceacef6d9a445ee03f0526c77942403336b46495a5c3fd",
         "affectsGlobalScope": false
       },
@@ -6080,7 +6080,8 @@
       "../src/Modules/Game/game.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/typeorm/index.d.ts",
-        "../src/Modules/Game/game.entity.ts"
+        "../src/Modules/Game/game.entity.ts",
+        "../src/Modules/SubCategory/subCategories.service.ts"
       ],
       "../src/Modules/SubCategory/subCategories.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -8617,7 +8618,8 @@
       ],
       "../src/Modules/Game/game.service.ts": [
         "../node_modules/typeorm/index.d.ts",
-        "../src/Modules/Game/game.entity.ts"
+        "../src/Modules/Game/game.entity.ts",
+        "../src/Modules/SubCategory/subCategories.service.ts"
       ],
       "../src/Modules/SubCategory/subCategories.controller.ts": [
         "../node_modules/@types/express/index.d.ts",

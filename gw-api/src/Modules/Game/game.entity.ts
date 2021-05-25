@@ -37,9 +37,9 @@ export class Game {
   platforms: string;
 
   @Column()
-  stats: boolean;
+  status: boolean;
 
   @ManyToMany(() => SubCategory)
   @JoinTable()
-  subCategory: SubCategory;
+  subCategory: SubCategory[];
 }

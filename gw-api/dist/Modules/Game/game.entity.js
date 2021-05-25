@@ -53,11 +53,11 @@ __decorate([
 __decorate([
     typeorm_1.Column(),
     __metadata("design:type", Boolean)
-], Game.prototype, "stats", void 0);
+], Game.prototype, "status", void 0);
 __decorate([
     typeorm_1.ManyToMany(() => subCategories_entity_1.SubCategory),
     typeorm_1.JoinTable(),
-    __metadata("design:type", subCategories_entity_1.SubCategory)
+    __metadata("design:type", Array)
 ], Game.prototype, "subCategory", void 0);
 Game = __decorate([
     typeorm_1.Entity()

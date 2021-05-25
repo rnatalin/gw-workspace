@@ -9,6 +9,6 @@ export declare class Game {
     mainImg: string;
     subImg: string;
     platforms: string;
-    stats: boolean;
-    subCategory: SubCategory;
+    status: boolean;
+    subCategory: SubCategory[];
 }
