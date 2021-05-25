@@ -1,6 +1,5 @@
 import { Injectable, Inject } from '@nestjs/common';
 import { Repository } from 'typeorm';
-import { Category } from '../Categories/categories.entity';
 import { Game } from './game.entity';
 
 @Injectable()
@@ -33,7 +32,6 @@ export class GameService {
   async updateGame(id: number, data: any): Promise<Game> {
     const game = await this.findById(id);
     if (!game) throw new Error('Ta na disney patrao?');
-    // console.log(data)
     game.name = data.name;
     game.description = data.description;
     game.filename = data.filename;
@@ -43,8 +41,7 @@ export class GameService {
     game.subImg = data.subImg;
     game.platforms = data.platforms;
     game.stats = data.stats;
-    
+
     return this.gameRepository.save(game);
-    //const update = this.gameRepository.update()
   }
 }

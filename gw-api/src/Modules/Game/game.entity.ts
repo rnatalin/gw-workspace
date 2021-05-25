@@ -1,5 +1,10 @@
-import { Entity, Column, PrimaryGeneratedColumn, ManyToMany, JoinTable, JoinColumn } from 'typeorm';
-import {Category} from '../Categories/categories.entity';
+import {
+  Entity,
+  Column,
+  PrimaryGeneratedColumn,
+  ManyToMany,
+  JoinTable,
+} from 'typeorm';
 import { SubCategory } from '../SubCategory/subCategories.entity';
 
 @Entity()
@@ -22,16 +27,16 @@ export class Game {
   @Column()
   isPublished: boolean;
 
-  @Column({nullable: true})
+  @Column()
   mainImg: string;
 
-  @Column({nullable: true })
+  @Column()
   subImg: string;
 
-  @Column({nullable: true})
+  @Column()
   platforms: string;
 
-  @Column({nullable: true})
+  @Column()
   stats: boolean;
 
   @ManyToMany(() => SubCategory)

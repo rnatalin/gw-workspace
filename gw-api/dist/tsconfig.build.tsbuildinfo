@@ -1177,7 +1177,7 @@
         "affectsGlobalScope": false
       },
       "../src/app.service.ts": {
-        "version": "eaf8514ce110fa428a93a27408df4d06d133dbd9ed0a775c315ddfdd507853a9",
+        "version": "dcc52138f5f7fb7aa2aee860ac41b7ed8a4a33038024e42b72182967719bf56a",
         "signature": "653711fba8904aa27fd8911b63cf526e7b334e13a292da4cefdbbe179ac3f3f2",
         "affectsGlobalScope": false
       },
@@ -2847,27 +2847,17 @@
         "affectsGlobalScope": false
       },
       "../src/Modules/SubCategory/subCategories.entity.ts": {
-        "version": "02f462f768dc5f1bd581c22687f63ce281a6bb3447baf78e94a4ae40be855849",
+        "version": "74b6e0cc6e320343af5aef1f3e7b59adab3c1a3adddefcfcaca032c327d7cba2",
         "signature": "084636334d239f9b661f279ace95823a001c705884e5dde0482432373eb6bae6",
         "affectsGlobalScope": false
       },
-      "../src/Modules/Game/game.entity.ts": {
-        "version": "6045b4f210711289e0ecee4fb2b46f7515869e38172a113f33144028cd68c2d3",
-        "signature": "b3ceb2cf1bf07eba1e83e0f852ee958583397efb2f6463c1c6931799144d7217",
-        "affectsGlobalScope": false
-      },
-      "../src/Modules/SubCategory/subCategories.provider.ts": {
-        "version": "fd82732e07032119120ca11ef722dc370904504696333ec3b6810e82c8c4de85",
-        "signature": "d223b9fb74158be1d64aa94959edf7e318765f060986e9b4a48952636d5223e1",
-        "affectsGlobalScope": false
-      },
       "../src/Modules/Categories/categories.entity.ts": {
-        "version": "c9489c005bd5a419181078a840cc1fc4fc1f3948f302e81cea11c556acb15cf5",
+        "version": "db8a21d4c269680b511f79c0f3099482ac3ed6b8dad9695860a0ae41943dc07e",
         "signature": "59fdfb37851b34787ac6d195bfe31b0422f2bc2ea30e7e3ed2e6ec334821bc35",
         "affectsGlobalScope": false
       },
       "../src/Modules/Categories/dto/createCategory.dto.ts": {
-        "version": "f12f68c6beed93e4bd57af7397eab6e06070bfb242500ba23cfcfdcacaec5fc9",
+        "version": "49a76a0d9165e9c6fbab6e3c4dfaca84b5e64f935e335bcbbb25f8a8e536d6af",
         "signature": "2d7e2044be02c36285b7da983074bd867c34e2f643d27f165da9e2781281f63e",
         "affectsGlobalScope": false
       },
@@ -3147,13 +3137,13 @@
         "affectsGlobalScope": false
       },
       "../src/Modules/Categories/categories.controllers.ts": {
-        "version": "34bd9568ebe26803fbb21a163c8e493aa39d6541472daef4e7ca8a5334de9c9e",
+        "version": "342ad2a25d5a7cd7cd89cc0968b41f512ef2021ff5355fa992125b20ebc3e1ac",
         "signature": "c685d5d1403410e35633ab16309fb47e3bf2b5652511ba71782bbe6f804c2b10",
         "affectsGlobalScope": false
       },
       "../src/Modules/Categories/categories.providers.ts": {
-        "version": "5d5dc4d8e98d14494d623114778fa89be028aa688e3b2b8cc3bd340b6ea7826f",
-        "signature": "c0447147ddd82a82b16fbc4f9af13fe6b30499a2c619db64402a87bd18bdcfcc",
+        "version": "9a0986637639417a38eeb2765b025a05688eb81d81d58fbd9d912c3ae72a67d1",
+        "signature": "7f4e9e409bf5c10febfcb9e27fe518c8e5dcdeea80ff988de47f5f9614f56267",
         "affectsGlobalScope": false
       },
       "../src/Modules/Categories/categories.module.ts": {
@@ -3162,18 +3152,23 @@
         "affectsGlobalScope": false
       },
       "../src/Modules/SubCategory/dto/createSubCategory.dto.ts": {
-        "version": "b42478b1bd2ea2e50115362ad4048c30f4019062e649228817d4eb01503122fa",
+        "version": "dc1f15f190636ffddee2a70bb340271befa8fbfdcb847aeb4877a3c0ba376b7b",
         "signature": "6440660ad2a82288bd94271532a10d829a54f00fdf1667a690bd0e04f8a9b2bf",
         "affectsGlobalScope": false
       },
       "../src/Modules/SubCategory/subCategories.service.ts": {
-        "version": "8c6329e0010a0e951c0b426a106b8c4c84b8902df5a8db5afa2dbf9c8113beaa",
+        "version": "abdd41b7e5a5a9a2eea6edc7468fee1e2e9a2baceedc9c7d0d50266566f0e163",
         "signature": "b59b91f519eba7eee770d8ba30bf38813b2358e21eca31248dace50e00f7fd7e",
         "affectsGlobalScope": false
       },
       "../src/Modules/SubCategory/subCategories.controller.ts": {
-        "version": "1e6c86caabe303e32cdbb5fe05c2dfeef7d6ce851ac3f4f9317642666a759524",
+        "version": "c35b6eadbfc98ab3ff72c4ad46c514c3e23f1a2c4ca6eb8a8cb1dc5e0223d9ce",
         "signature": "bd721dade20b15725ee8665ad2bcb217d4f787f015cb14d4fa36fb70aef4677c",
+        "affectsGlobalScope": false
+      },
+      "../src/Modules/SubCategory/subCategories.provider.ts": {
+        "version": "8c2231d74a52cdefd1a04bd3f1486f20bd5bb3f52faa110968b10f10e9ba902e",
+        "signature": "a85a02e19bf1b700105126d5cebae4ee42599cf76854d2da23ce9e4bdcd8fdf6",
         "affectsGlobalScope": false
       },
       "../src/Modules/SubCategory/subCategories.module.ts": {
@@ -3181,8 +3176,13 @@
         "signature": "167705b72cf306c313be2f72a32f75504b7b19329441ff7b5cec165001d7de89",
         "affectsGlobalScope": false
       },
+      "../src/Modules/Game/game.entity.ts": {
+        "version": "5e48f84de37c5315487d01a8dabc8357b7533d591ef7cd0ead41d0c70356ef26",
+        "signature": "b3ceb2cf1bf07eba1e83e0f852ee958583397efb2f6463c1c6931799144d7217",
+        "affectsGlobalScope": false
+      },
       "../src/Modules/Game/game.service.ts": {
-        "version": "0055de1c5e0e21351ceac62efeb7238a4a3c265021d99bad89861a3140cd375b",
+        "version": "904e25ec00baef37bdf2460e0c09098af35fac9083d736f826a95215aecc58a2",
         "signature": "15449d9eb81b5ab0dac5af0b46a8915888747d0ccff913c0d71e9ed7d7cbbf22",
         "affectsGlobalScope": false
       },
@@ -3192,8 +3192,8 @@
         "affectsGlobalScope": false
       },
       "../src/Modules/Game/game.providers.ts": {
-        "version": "624443cbcb52fbeec5eba6b024eadcf2a08564358981a379a7eced5d62cd3ffe",
-        "signature": "39e4fd090b77b569ce2449c5133c76019492063bcf94638b1d602d621f8474cb",
+        "version": "4e212b281d2585d1d65ddcb6a2db6e44995367a39ae4af0666105866b35b9871",
+        "signature": "bdac39a9ca445621c82772818bca6a72edf8efa5fb791a03019b613217dd7d50",
         "affectsGlobalScope": false
       },
       "../src/Modules/Game/game.module.ts": {
@@ -3202,23 +3202,23 @@
         "affectsGlobalScope": false
       },
       "../src/Modules/Users/user.entity.ts": {
-        "version": "5e149ec41a56b32b828b2d5b2e970e19ce8a296026db64e798d7874c36ab4565",
+        "version": "5c19d6a6b6dfdd0629e1c2975b8edcc70b97d9a513febde411ca4c03254e2455",
         "signature": "f4946aed469a7ea2b60fe6418f4dcddda35cd95e45cb049bc0afb8874cd67edc",
         "affectsGlobalScope": false
       },
       "../src/Modules/Users/user.service.ts": {
-        "version": "7e3f023eab9e007cf49b48198fdbdf1a1887b80cb09bd0c7bb0eb41eaf9b1cca",
+        "version": "8ef9347a175978b51e872c2248f27b9253701a0a00fde882462891126a89501c",
         "signature": "c43e494b472ba0a6fed2856b630fa0f7c766ee4daf76d09d43f816253d6e0e35",
         "affectsGlobalScope": false
       },
       "../src/Modules/Users/user.controller.ts": {
-        "version": "bc432b555ca7f0194332ea57da46e7804aeb83dfbdf156087bd79f774e33026e",
+        "version": "11bd5b3b78e0751bab4c974352a8178060674f90d25e14cb08db645462785622",
         "signature": "6544b3884436d46ecd0a838f8d7c4756ee344eca9ce3ba4738764fd85e4a5c7d",
         "affectsGlobalScope": false
       },
       "../src/Modules/Users/user.provider.ts": {
-        "version": "61b92d96a2089de836b562bd72f63823c6c39a53aa54185d43417a4dfae22514",
-        "signature": "1147b58b1788b06dfaa3d7b24af2f45e13fed83e509f268dea40891a41322b41",
+        "version": "7413e0d0aba6924247481e69434acb1885727629daed1294647c55a86229086c",
+        "signature": "021fe8967a12ade3132c0e85a98406a20bb18070274eaf876e69e9183d95abb0",
         "affectsGlobalScope": false
       },
       "../src/Modules/Users/user.module.ts": {
@@ -3227,7 +3227,7 @@
         "affectsGlobalScope": false
       },
       "../src/app.module.ts": {
-        "version": "5dbb357a4aae399892b56f99800d72a241d659b5094ffc6297e2c24e29419893",
+        "version": "2a0fa3ce5aaaf4e23bf553acd5f97ca50e902f5166663760b9cd173ed0b09260",
         "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644",
         "affectsGlobalScope": false
       },
@@ -6036,9 +6036,7 @@
       ],
       "../src/Modules/Categories/categories.entity.ts": [
         "../node_modules/typeorm/index.d.ts",
-        "../src/Modules/Game/game.entity.ts",
-        "../src/Modules/SubCategory/subCategories.entity.ts",
-        "../src/Modules/SubCategory/subCategories.provider.ts"
+        "../src/Modules/SubCategory/subCategories.entity.ts"
       ],
       "../src/Modules/Categories/categories.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -6065,7 +6063,6 @@
       ],
       "../src/Modules/Game/game.entity.ts": [
         "../node_modules/typeorm/index.d.ts",
-        "../src/Modules/Categories/categories.entity.ts",
         "../src/Modules/SubCategory/subCategories.entity.ts"
       ],
       "../src/Modules/Game/game.module.ts": [
@@ -6083,7 +6080,6 @@
       "../src/Modules/Game/game.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/typeorm/index.d.ts",
-        "../src/Modules/Categories/categories.entity.ts",
         "../src/Modules/Game/game.entity.ts"
       ],
       "../src/Modules/SubCategory/subCategories.controller.ts": [

@@ -39,19 +39,19 @@ __decorate([
     __metadata("design:type", Boolean)
 ], Game.prototype, "isPublished", void 0);
 __decorate([
-    typeorm_1.Column({ nullable: true }),
+    typeorm_1.Column(),
     __metadata("design:type", String)
 ], Game.prototype, "mainImg", void 0);
 __decorate([
-    typeorm_1.Column({ nullable: true }),
+    typeorm_1.Column(),
     __metadata("design:type", String)
 ], Game.prototype, "subImg", void 0);
 __decorate([
-    typeorm_1.Column({ nullable: true }),
+    typeorm_1.Column(),
     __metadata("design:type", String)
 ], Game.prototype, "platforms", void 0);
 __decorate([
-    typeorm_1.Column({ nullable: true }),
+    typeorm_1.Column(),
     __metadata("design:type", Boolean)
 ], Game.prototype, "stats", void 0);
 __decorate([

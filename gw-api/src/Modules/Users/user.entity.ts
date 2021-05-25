@@ -14,13 +14,12 @@ export class User {
   @Column()
   password: string;
 
-  @Column({default: false})
+  @Column({ default: false })
   access: boolean;
 
   @Column()
   status: boolean;
 
-  @Column({default: 0})
+  @Column()
   profilePic: string;
-
 }

@@ -1,9 +1,8 @@
-import { Injectable, Inject, Post } from '@nestjs/common';
+import { Injectable, Inject } from '@nestjs/common';
 import { Repository } from 'typeorm';
 import { CategoryService } from '../Categories/categories.service';
 import { SubCategory } from './subCategories.entity';
 import { CreateSubCategoryDto } from './dto/createSubCategory.dto';
-
 
 @Injectable()
 export class SubCategoryService {
@@ -15,15 +14,15 @@ export class SubCategoryService {
 
   async getSubCategories(): Promise<SubCategory[]> {
     return this.subCategoryRepository.find({
-      relations:["category"],
+      relations: ['category'],
     });
   }
 
   async createSubCategory(data: CreateSubCategoryDto): Promise<SubCategory> {
-    // vc busca no banco uma categoria 
-    const category = await this.categoryService.findById(data.category); // SELECT * FROM category WHERE id  
+    // vc busca no banco uma categoria
+    const category = await this.categoryService.findById(data.category); // SELECT * FROM category WHERE id
     // armazenou ela na const category
-    
+
     const create = this.subCategoryRepository.create({
       ...data,
       category, // passou ela pra dentro da sua sub categoria
@@ -38,9 +37,9 @@ export class SubCategoryService {
     const category = await this.categoryService.findById(data.categoryID);
     const subCategory = await this.findById(id);
     if (!subCategory) throw new Error('Ta na disney patrao?');
-    subCategory.name = data.name,
-    subCategory.description = data.description, 
-    category;
+    (subCategory.name = data.name),
+      (subCategory.description = data.description),
+      category;
 
     return this.subCategoryRepository.save(subCategory);
   }

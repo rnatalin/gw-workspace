@@ -1,7 +1,7 @@
 import { Controller, Get, Param, Patch, Post, Req } from '@nestjs/common';
 import { User } from './user.entity';
 import { UserService } from './user.service';
-import { Request } from 'express'
+import { Request } from 'express';
 
 @Controller('user')
 export class UserController {
@@ -14,13 +14,16 @@ export class UserController {
   async createUser(@Req() request: Request): Promise<User> {
     return this.userService.createUser(request.body);
   }
- @Patch(':id')
-  async updateUser(@Req() request: Request, @Param('id') id: number): Promise<User>{
-    return this.userService.updateUser(id, request.body)
+  @Patch(':id')
+  async updateUser(
+    @Req() request: Request,
+    @Param('id') id: number,
+  ): Promise<User> {
+    return this.userService.updateUser(id, request.body);
   }
-  
+
   @Get(':id')
-   async findById(@Param('id') id: number): Promise<User>{
-   return this.userService.findById(id)
+  async findById(@Param('id') id: number): Promise<User> {
+    return this.userService.findById(id);
   }
 }
