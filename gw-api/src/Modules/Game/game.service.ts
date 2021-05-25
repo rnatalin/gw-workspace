@@ -1,4 +1,4 @@
-import { Injectable, Inject } from '@nestjs/common';
+import { Inject, Injectable } from '@nestjs/common';
 import { Repository } from 'typeorm';
 import { CreateGameDto } from './dto/CreateGame.dto';
 import { Game } from './game.entity';
@@ -19,19 +19,17 @@ export class GameService {
   }
 
   async createGame(data: CreateGameDto): Promise<Game> {
-    const allSubCategories = await this.subCategoryService.getSubCategories();
-    let subCategories = [];
+    const { categories, ...rest } = data;
 
-    subCategories = data.categories.map((s) => {
-      return allSubCategories.find((sub) => sub.id === s);
-    });
+    const subCategories = [];
+
+    for (const categoryId of categories) {
+      const res = await this.subCategoryService.getSubCategoryById(categoryId);
+      subCategories.push(res);
+    }
 
     const create = this.gameRepository.create({
-      name: data.name,
-      description: data.description,
-      filename: data.filename,
-      views: data.views,
-      isPublished: data.isPublished,
+      ...rest,
       subCategories,
     });
 
@@ -39,8 +37,11 @@ export class GameService {
   }
 
   async findById(id: number): Promise<Game> {
-    return this.gameRepository.findOne(id);
+    return this.gameRepository.findOne(id, {
+      relations: ['subCategories', 'subCategories.category'],
+    });
   }
+
   async updateGame(id: number, data: any): Promise<Game> {
     const game = await this.findById(id);
     if (!game) throw new Error('Ta na disney patrao?');

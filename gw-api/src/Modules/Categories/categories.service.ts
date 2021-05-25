@@ -10,7 +10,9 @@ export class CategoryService {
   ) {}
 
   async findAll(): Promise<Category[]> {
-    return this.categoryRepository.find({ relations: [] });
+    return this.categoryRepository.find({
+      relations: ['subCategories'],
+    });
   }
   async createCategory(data: any): Promise<Category> {
     const create = this.categoryRepository.create({
