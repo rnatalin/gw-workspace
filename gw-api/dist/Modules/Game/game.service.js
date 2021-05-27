@@ -16,21 +16,27 @@ exports.GameService = void 0;
 const common_1 = require("@nestjs/common");
 const typeorm_1 = require("typeorm");
 const subCategories_service_1 = require("../SubCategory/subCategories.service");
+const platforms_service_1 = require("../Platforms/platforms.service");
 let GameService = class GameService {
-    constructor(gameRepository, subCategoryService) {
+    constructor(platformRepository, gameRepository, subCategoryService, platformService) {
+        this.platformRepository = platformRepository;
         this.gameRepository = gameRepository;
         this.subCategoryService = subCategoryService;
+        this.platformService = platformService;
     }
     async findAll() {
         return this.gameRepository.find({
-            relations: ['subCategory', 'subCategory.category'],
+            relations: ['subCategory', 'subCategory.category', 'platform'],
         });
     }
-    async createGame(data, category) {
+    async createGame(data, category, platform) {
         const saveSubCategories = await this.subCategoryService.getSubCategories();
-        let subCategory = [];
-        subCategory = category.map((s) => {
-            return saveSubCategories.find((sub) => sub.id);
+        const subCategory = data.subCategory.map((i) => {
+            return saveSubCategories.find((n) => n.id == i);
+        });
+        const savePlatforms = await this.platformRepository.find();
+        const Platforms = data.platform.map((i) => {
+            return savePlatforms.find((n) => n.id == i);
         });
         const create = this.gameRepository.create({
             name: data.name,
@@ -42,12 +48,16 @@ let GameService = class GameService {
             subImg: data.subImg,
             platforms: data.platforms,
             status: data.stats,
-            subCategory,
+            subCategory: subCategory,
+            platform: Platforms
         });
+        console.log(create);
         return this.gameRepository.save(create);
     }
     async findById(id) {
-        return this.gameRepository.findOne(id);
+        return this.gameRepository.findOne(id, {
+            relations: ['subCategory', 'subCategory.category'],
+        });
     }
     async updateGame(id, data) {
         const game = await this.findById(id);
@@ -67,9 +77,12 @@ let GameService = class GameService {
 };
 GameService = __decorate([
     common_1.Injectable(),
-    __param(0, common_1.Inject('GAME_REPOSITORY')),
+    __param(0, common_1.Inject('PLATFORM_REPOSITORY')),
+    __param(1, common_1.Inject('GAME_REPOSITORY')),
     __metadata("design:paramtypes", [typeorm_1.Repository,
-        subCategories_service_1.SubCategoryService])
+        typeorm_1.Repository,
+        subCategories_service_1.SubCategoryService,
+        platforms_service_1.PlatformService])
 ], GameService);
 exports.GameService = GameService;
 //# sourceMappingURL=game.service.js.map

@@ -12,7 +12,7 @@ export class GameController {
   }
   @Post('')
   async createGame(@Req() request: Request): Promise<Game> {
-    return this.gameService.createGame(request.body, request.body.subCategory);
+    return this.gameService.createGame(request.body, request.body.subCategory, request.body.platform);
   }
   @Patch(':id')
   async updateGame(

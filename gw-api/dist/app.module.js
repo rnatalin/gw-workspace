@@ -14,11 +14,12 @@ const categories_module_1 = require("./Modules/Categories/categories.module");
 const game_module_1 = require("./Modules/Game/game.module");
 const user_module_1 = require("./Modules/Users/user.module");
 const subCategories_module_1 = require("./Modules/SubCategory/subCategories.module");
+const platforms_module_1 = require("./Modules/Platforms/platforms.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     common_1.Module({
-        imports: [game_module_1.GameModule, categories_module_1.CategoryModule, user_module_1.UserModule, subCategories_module_1.SubCategoryModule],
+        imports: [game_module_1.GameModule, categories_module_1.CategoryModule, user_module_1.UserModule, subCategories_module_1.SubCategoryModule, platforms_module_1.PlatformModule],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
     })

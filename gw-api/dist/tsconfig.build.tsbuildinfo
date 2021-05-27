@@ -3151,9 +3151,14 @@
         "signature": "4c8b1a9ee76fcb7fa41873710fed2c8f33f3e63cffb215eae10198e97fef0b31",
         "affectsGlobalScope": false
       },
+      "../src/Modules/Platforms/platforms.entity.ts": {
+        "version": "bdedf4ea413f8d6f605c735a2a82b39d961f06185009e119614c2c791faf5f20",
+        "signature": "d7e7faada265985d1265255e55a5bdbd9f7a634bcb04f0418169b31ff14d1275",
+        "affectsGlobalScope": false
+      },
       "../src/Modules/Game/game.entity.ts": {
-        "version": "9a78b432ca8421a697d2b5dc115c63c236a140303067a93d3737fae1d577008f",
-        "signature": "e7b9d250f0a83369ac3f3ba67217e3027508cd834e40b38089ca254f0bf71784",
+        "version": "8b9b5e87a5889d66f15affedde77a6d741bfddfc362e3f81e621dc575797cf45",
+        "signature": "50847a35b543b2456ef1fae556c85df6994021af05553bbb2e2ecda616cb0a68",
         "affectsGlobalScope": false
       },
       "../src/Modules/SubCategory/dto/createSubCategory.dto.ts": {
@@ -3166,13 +3171,18 @@
         "signature": "b59b91f519eba7eee770d8ba30bf38813b2358e21eca31248dace50e00f7fd7e",
         "affectsGlobalScope": false
       },
+      "../src/Modules/Platforms/platforms.service.ts": {
+        "version": "7a1e3c62441481816537d7dacef3bbe4fb52a5acfc1e2fe2f8ac7ef12018be82",
+        "signature": "458e747f7a87479886e27c4f763b624313da03fa592d380ffa900c50addc396f",
+        "affectsGlobalScope": false
+      },
       "../src/Modules/Game/game.service.ts": {
-        "version": "2eb64486608eba410d0fd8628535c92920d267f0c089bd5d88b74cdb05041277",
-        "signature": "501776dddff9c99cd6e0b1558e8e1be46746ed33cd226cd6864fdd3523b5db8c",
+        "version": "a8440b1f32d048452e810c8374c812f7ecf36a4e4e8660af8cdf3fda8eabde4e",
+        "signature": "6580ede0ea07ff9103efde2ee668f1cf31e81c9547453b6505e7398d0dcab84a",
         "affectsGlobalScope": false
       },
       "../src/Modules/Game/game.controller.ts": {
-        "version": "619ec121a3918248382833981389c01ff12df2aaa519a87f6f0ed73ef025ef5c",
+        "version": "d91a62da48b88d1c54a27e0fd786f1de11176af6fcafa8a15749cc62cf568407",
         "signature": "2652b777513697d5950f8045d5a2352eea0bf62fccae9b552a5932897d1171a6",
         "affectsGlobalScope": false
       },
@@ -3196,8 +3206,23 @@
         "signature": "167705b72cf306c313be2f72a32f75504b7b19329441ff7b5cec165001d7de89",
         "affectsGlobalScope": false
       },
+      "../src/Modules/Platforms/platforms.controllers.ts": {
+        "version": "f6d89678eebe4fc263489009127bf0c73bce2a6bc52041c7fdc92a42201f47c2",
+        "signature": "fab729aa268ef0c9aba29434be63183fe32d6c5c27b63b893266bbdb3d796519",
+        "affectsGlobalScope": false
+      },
+      "../src/Modules/Platforms/platforms.providers.ts": {
+        "version": "12aba96f88d7f3c251e11b5f27c34563e5206536037e2aabf469d70bf09bee21",
+        "signature": "fef91f41b4906b54eac77c7b65c48b336728d78ab19b7c28aa3e78e36cfbb6f5",
+        "affectsGlobalScope": false
+      },
+      "../src/Modules/Platforms/platforms.module.ts": {
+        "version": "02a5c0be477b71e9df498f8b14519095dd518edef50e38fd3106cc836d287787",
+        "signature": "38298bffe907f69b3def681c94dbd3654caf7575ffc1087959d14194218b33a1",
+        "affectsGlobalScope": false
+      },
       "../src/Modules/Game/game.module.ts": {
-        "version": "8f59e1319a33733bcf8fde517ccae0a5d4415255feddf13871df5074e3e9c33b",
+        "version": "cfc5f093deac60c4689934e484f316d01da56adf1eae11a1add6bd33827d221b",
         "signature": "07d63801eb6862461cceacef6d9a445ee03f0526c77942403336b46495a5c3fd",
         "affectsGlobalScope": false
       },
@@ -3227,7 +3252,7 @@
         "affectsGlobalScope": false
       },
       "../src/app.module.ts": {
-        "version": "2a0fa3ce5aaaf4e23bf553acd5f97ca50e902f5166663760b9cd173ed0b09260",
+        "version": "61555057b723500d029d4eafeaf22f155bdd370dfe1ada2c84e8c66b204ae46a",
         "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644",
         "affectsGlobalScope": false
       },
@@ -6063,6 +6088,7 @@
       ],
       "../src/Modules/Game/game.entity.ts": [
         "../node_modules/typeorm/index.d.ts",
+        "../src/Modules/Platforms/platforms.entity.ts",
         "../src/Modules/SubCategory/subCategories.entity.ts"
       ],
       "../src/Modules/Game/game.module.ts": [
@@ -6070,6 +6096,7 @@
         "../src/Modules/Game/game.controller.ts",
         "../src/Modules/Game/game.providers.ts",
         "../src/Modules/Game/game.service.ts",
+        "../src/Modules/Platforms/platforms.module.ts",
         "../src/Modules/SubCategory/subCategories.module.ts",
         "../src/database/database.module.ts"
       ],
@@ -6081,7 +6108,35 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/typeorm/index.d.ts",
         "../src/Modules/Game/game.entity.ts",
+        "../src/Modules/Platforms/platforms.entity.ts",
+        "../src/Modules/Platforms/platforms.service.ts",
         "../src/Modules/SubCategory/subCategories.service.ts"
+      ],
+      "../src/Modules/Platforms/platforms.controllers.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@types/express/index.d.ts",
+        "../src/Modules/Platforms/platforms.entity.ts",
+        "../src/Modules/Platforms/platforms.service.ts"
+      ],
+      "../src/Modules/Platforms/platforms.entity.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/Modules/Game/game.entity.ts"
+      ],
+      "../src/Modules/Platforms/platforms.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/Modules/Platforms/platforms.controllers.ts",
+        "../src/Modules/Platforms/platforms.providers.ts",
+        "../src/Modules/Platforms/platforms.service.ts",
+        "../src/database/database.module.ts"
+      ],
+      "../src/Modules/Platforms/platforms.providers.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/Modules/Platforms/platforms.entity.ts"
+      ],
+      "../src/Modules/Platforms/platforms.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/typeorm/index.d.ts",
+        "../src/Modules/Platforms/platforms.entity.ts"
       ],
       "../src/Modules/SubCategory/subCategories.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -6145,6 +6200,7 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/Modules/Categories/categories.module.ts",
         "../src/Modules/Game/game.module.ts",
+        "../src/Modules/Platforms/platforms.module.ts",
         "../src/Modules/SubCategory/subCategories.module.ts",
         "../src/Modules/Users/user.module.ts",
         "../src/app.controller.ts",
@@ -8610,6 +8666,7 @@
         "../src/Modules/Game/game.service.ts"
       ],
       "../src/Modules/Game/game.entity.ts": [
+        "../src/Modules/Platforms/platforms.entity.ts",
         "../src/Modules/SubCategory/subCategories.entity.ts"
       ],
       "../src/Modules/Game/game.providers.ts": [
@@ -8619,7 +8676,25 @@
       "../src/Modules/Game/game.service.ts": [
         "../node_modules/typeorm/index.d.ts",
         "../src/Modules/Game/game.entity.ts",
+        "../src/Modules/Platforms/platforms.entity.ts",
+        "../src/Modules/Platforms/platforms.service.ts",
         "../src/Modules/SubCategory/subCategories.service.ts"
+      ],
+      "../src/Modules/Platforms/platforms.controllers.ts": [
+        "../node_modules/@types/express/index.d.ts",
+        "../src/Modules/Platforms/platforms.entity.ts",
+        "../src/Modules/Platforms/platforms.service.ts"
+      ],
+      "../src/Modules/Platforms/platforms.entity.ts": [
+        "../src/Modules/Game/game.entity.ts"
+      ],
+      "../src/Modules/Platforms/platforms.providers.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/Modules/Platforms/platforms.entity.ts"
+      ],
+      "../src/Modules/Platforms/platforms.service.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/Modules/Platforms/platforms.entity.ts"
       ],
       "../src/Modules/SubCategory/subCategories.controller.ts": [
         "../node_modules/@types/express/index.d.ts",
@@ -9359,6 +9434,11 @@
       "../src/Modules/Game/game.module.ts",
       "../src/Modules/Game/game.providers.ts",
       "../src/Modules/Game/game.service.ts",
+      "../src/Modules/Platforms/platforms.controllers.ts",
+      "../src/Modules/Platforms/platforms.entity.ts",
+      "../src/Modules/Platforms/platforms.module.ts",
+      "../src/Modules/Platforms/platforms.providers.ts",
+      "../src/Modules/Platforms/platforms.service.ts",
       "../src/Modules/SubCategory/dto/createSubCategory.dto.ts",
       "../src/Modules/SubCategory/subCategories.controller.ts",
       "../src/Modules/SubCategory/subCategories.entity.ts",

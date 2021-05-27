@@ -1,3 +1,4 @@
+import { Platform } from '../Platforms/platforms.entity';
 import { SubCategory } from '../SubCategory/subCategories.entity';
 export declare class Game {
     id: number;
@@ -11,4 +12,5 @@ export declare class Game {
     platforms: string;
     status: boolean;
     subCategory: SubCategory[];
+    platform: Platform[];
 }

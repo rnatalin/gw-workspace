@@ -5,9 +5,9 @@ import { CategoryModule } from './Modules/Categories/categories.module';
 import { GameModule } from './Modules/Game/game.module';
 import { UserModule } from './Modules/Users/user.module';
 import { SubCategoryModule } from './Modules/SubCategory/subCategories.module';
-
+import { PlatformModule } from './Modules/Platforms/platforms.module'
 @Module({
-  imports: [GameModule, CategoryModule, UserModule, SubCategoryModule],
+  imports: [GameModule, CategoryModule, UserModule, SubCategoryModule, PlatformModule],
   controllers: [AppController],
   providers: [AppService],
 })
