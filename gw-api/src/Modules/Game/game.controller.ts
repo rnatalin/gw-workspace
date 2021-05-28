@@ -19,7 +19,7 @@ export class GameController {
     @Req() request: Request,
     @Param('id') id: number,
   ): Promise<Game> {
-    return this.gameService.updateGame(id, request.body);
+    return this.gameService.updateGame(id, request.body, request.body, request.body);
   }
   @Get(':id')
   async findById(@Param('id') id: number): Promise<Game> {

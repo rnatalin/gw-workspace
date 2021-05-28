@@ -26,7 +26,7 @@ let GameService = class GameService {
     }
     async findAll() {
         return this.gameRepository.find({
-            relations: ['subCategory', 'subCategory.category', 'platform'],
+            relations: ['subCategory', 'subCategory.category', 'platform', 'photos'],
         });
     }
     async createGame(data, category, platform) {
@@ -44,22 +44,27 @@ let GameService = class GameService {
             filename: data.filename,
             views: data.views,
             isPublished: data.isPublished,
-            mainImg: data.mainImg,
-            subImg: data.subImg,
-            platforms: data.platforms,
             status: data.stats,
             subCategory: subCategory,
-            platform: Platforms
+            platform: Platforms,
         });
         console.log(create);
         return this.gameRepository.save(create);
     }
     async findById(id) {
         return this.gameRepository.findOne(id, {
-            relations: ['subCategory', 'subCategory.category'],
+            relations: ['subCategory', 'subCategory.category', 'platform', 'photos'],
         });
     }
-    async updateGame(id, data) {
+    async updateGame(id, data, platform, category) {
+        const saveSubCategories = await this.subCategoryService.getSubCategories();
+        const subCategory = data.subCategory.map((i) => {
+            return saveSubCategories.find((n) => n.id == i);
+        });
+        const savePlatforms = await this.platformRepository.find();
+        const Platforms = data.platform.map((i) => {
+            return savePlatforms.find((n) => n.id == i);
+        });
         const game = await this.findById(id);
         if (!game)
             throw new Error('Ta na disney patrao?');
@@ -68,10 +73,9 @@ let GameService = class GameService {
         game.filename = data.filename;
         game.views = data.views;
         game.isPublished = data.isPublished;
-        game.mainImg = data.mainImg;
-        game.subImg = data.subImg;
-        game.platforms = data.platforms;
         game.status = data.stats;
+        game.subCategory = subCategory;
+        game.platform = Platforms;
         return this.gameRepository.save(game);
     }
 };

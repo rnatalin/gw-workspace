@@ -31,7 +31,7 @@ export class SubCategoryService {
   }
 
   async findById(id: number): Promise<SubCategory> {
-    return this.subCategoryRepository.findOne(id);
+    return this.subCategoryRepository.findOne(id, {relations: ['category']});
   }
   async updateSubCategory(id: number, data: any): Promise<SubCategory> {
     const category = await this.categoryService.findById(data.categoryID);
@@ -39,7 +39,7 @@ export class SubCategoryService {
     if (!subCategory) throw new Error('Ta na disney patrao?');
     (subCategory.name = data.name),
       (subCategory.description = data.description),
-      category;
+      (subCategory.category = category);
 
     return this.subCategoryRepository.save(subCategory);
   }

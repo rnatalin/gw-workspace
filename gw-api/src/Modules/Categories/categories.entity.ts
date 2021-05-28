@@ -6,13 +6,13 @@ export class Category {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ length: 500 })
+  @Column({ length: 500, nullable: true })
   name: string;
 
-  @Column('text')
+  @Column('text',{nullable: true })
   description: string;
 
-  @Column()
+  @Column({nullable: true })
   popularity: number;
 
   @OneToMany(() => SubCategory, ({ category }) => category)

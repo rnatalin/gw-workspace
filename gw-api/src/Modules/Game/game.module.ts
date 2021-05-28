@@ -5,6 +5,7 @@ import { GameProviders } from './game.providers';
 import { GameService } from './game.service';
 import { SubCategoryModule } from '../SubCategory/subCategories.module';
 import { PlatformModule } from '../Platforms/platforms.module'
+import { PhotoModule } from '../Photos/photo.module';
 @Module({
   controllers: [GameController],
   imports: [DatabaseModule, SubCategoryModule, PlatformModule],

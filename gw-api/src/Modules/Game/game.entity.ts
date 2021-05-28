@@ -5,7 +5,9 @@ import {
   ManyToMany,
   JoinTable,
   JoinColumn,
+  OneToMany,
 } from 'typeorm';
+import { Photo } from '../Photos/photo.entity';
 import { Platform } from '../Platforms/platforms.entity';
 import { SubCategory } from '../SubCategory/subCategories.entity';
 
@@ -29,23 +31,17 @@ export class Game {
   @Column()
   isPublished: boolean;
 
-  @Column({nullable: true})
-  mainImg: string;
-
-  @Column({nullable: true})
-  subImg: string;
-
-  @Column({nullable: true})
-  platforms: string;
-
-  @Column({nullable: true})
+  @Column({ nullable: true })
   status: boolean;
 
   @ManyToMany(() => SubCategory)
   @JoinTable()
   subCategory: SubCategory[];
 
-  @ManyToMany(() => Platform, ({game}) => game)
+  @ManyToMany(() => Platform, ({ game }) => game)
   @JoinTable()
   platform: Platform[];
+
+  @OneToMany(() => Photo, ({ gamesPhotos }) => gamesPhotos)
+  photos: Photo[];
 }

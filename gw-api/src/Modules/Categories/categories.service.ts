@@ -11,7 +11,7 @@ export class CategoryService {
   ) {}
 
   async findAll(): Promise<Category[]> {
-    return this.categoryRepository.find();
+    return this.categoryRepository.find({ relations: ['subCategories']});
   }
   async createCategory(data: CreateCategoryDto): Promise<Category> {
     // const subCategories = this.subCategoryService
@@ -23,7 +23,7 @@ export class CategoryService {
     return this.categoryRepository.save(create);
   }
   async findById(id: number): Promise<Category> {
-    return this.categoryRepository.findOne(id);
+    return this.categoryRepository.findOne(id, { relations: ['subCategories']});
   }
   async updateCategory(id: number, data: any): Promise<Category> {
     const category = await this.findById(id);

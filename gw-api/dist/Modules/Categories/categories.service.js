@@ -20,7 +20,7 @@ let CategoryService = class CategoryService {
         this.categoryRepository = categoryRepository;
     }
     async findAll() {
-        return this.categoryRepository.find();
+        return this.categoryRepository.find({ relations: ['subCategories'] });
     }
     async createCategory(data) {
         const create = this.categoryRepository.create({
@@ -31,7 +31,7 @@ let CategoryService = class CategoryService {
         return this.categoryRepository.save(create);
     }
     async findById(id) {
-        return this.categoryRepository.findOne(id);
+        return this.categoryRepository.findOne(id, { relations: ['subCategories'] });
     }
     async updateCategory(id, data) {
         const category = await this.findById(id);

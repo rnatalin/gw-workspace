@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Game = void 0;
 const typeorm_1 = require("typeorm");
+const photo_entity_1 = require("../Photos/photo.entity");
 const platforms_entity_1 = require("../Platforms/platforms.entity");
 const subCategories_entity_1 = require("../SubCategory/subCategories.entity");
 let Game = class Game {
@@ -41,18 +42,6 @@ __decorate([
 ], Game.prototype, "isPublished", void 0);
 __decorate([
     typeorm_1.Column({ nullable: true }),
-    __metadata("design:type", String)
-], Game.prototype, "mainImg", void 0);
-__decorate([
-    typeorm_1.Column({ nullable: true }),
-    __metadata("design:type", String)
-], Game.prototype, "subImg", void 0);
-__decorate([
-    typeorm_1.Column({ nullable: true }),
-    __metadata("design:type", String)
-], Game.prototype, "platforms", void 0);
-__decorate([
-    typeorm_1.Column({ nullable: true }),
     __metadata("design:type", Boolean)
 ], Game.prototype, "status", void 0);
 __decorate([
@@ -65,6 +54,10 @@ __decorate([
     typeorm_1.JoinTable(),
     __metadata("design:type", Array)
 ], Game.prototype, "platform", void 0);
+__decorate([
+    typeorm_1.OneToMany(() => photo_entity_1.Photo, ({ gamesPhotos }) => gamesPhotos),
+    __metadata("design:type", Array)
+], Game.prototype, "photos", void 0);
 Game = __decorate([
     typeorm_1.Entity()
 ], Game);

@@ -3,7 +3,7 @@ import { Repository } from 'typeorm';
 import { Game } from './game.entity';
 import { SubCategoryService } from '../SubCategory/subCategories.service';
 import { PlatformService } from '../Platforms/platforms.service';
-import { Platform } from '../Platforms/platforms.entity'
+import { Platform } from '../Platforms/platforms.entity';
 
 @Injectable()
 export class GameService {
@@ -15,10 +15,10 @@ export class GameService {
     private subCategoryService: SubCategoryService,
     private platformService: PlatformService,
   ) {}
-  
+
   async findAll(): Promise<Game[]> {
     return this.gameRepository.find({
-      relations: ['subCategory', 'subCategory.category', 'platform'],
+      relations: ['subCategory', 'subCategory.category', 'platform', 'photos'],
     });
   }
   async createGame(
@@ -30,7 +30,7 @@ export class GameService {
     const subCategory = data.subCategory.map((i) => {
       return saveSubCategories.find((n) => n.id == i);
     });
-    
+
     const savePlatforms = await this.platformRepository.find();
     const Platforms = data.platform.map((i) => {
       return savePlatforms.find((n) => n.id == i);
@@ -41,22 +41,33 @@ export class GameService {
       filename: data.filename,
       views: data.views,
       isPublished: data.isPublished,
-      mainImg: data.mainImg,
-      subImg: data.subImg,
-      platforms: data.platforms,
       status: data.stats,
       subCategory: subCategory,
-      platform: Platforms
+      platform: Platforms,
     });
     console.log(create);
     return this.gameRepository.save(create);
   }
   async findById(id: number): Promise<Game> {
     return this.gameRepository.findOne(id, {
-      relations: ['subCategory', 'subCategory.category'],
+      relations: ['subCategory', 'subCategory.category', 'platform', 'photos'],
     });
   }
-  async updateGame(id: number, data: any): Promise<Game> {
+  async updateGame(
+    id: number,
+    data: any,
+    platform: number[],
+    category: number[],
+  ): Promise<Game> {
+    const saveSubCategories = await this.subCategoryService.getSubCategories();
+    const subCategory = data.subCategory.map((i) => {
+      return saveSubCategories.find((n) => n.id == i);
+    });
+
+    const savePlatforms = await this.platformRepository.find();
+    const Platforms = data.platform.map((i) => {
+      return savePlatforms.find((n) => n.id == i);
+    });
     const game = await this.findById(id);
     if (!game) throw new Error('Ta na disney patrao?');
     game.name = data.name;
@@ -64,10 +75,9 @@ export class GameService {
     game.filename = data.filename;
     game.views = data.views;
     game.isPublished = data.isPublished;
-    game.mainImg = data.mainImg;
-    game.subImg = data.subImg;
-    game.platforms = data.platforms;
     game.status = data.stats;
+    game.subCategory = subCategory;
+    game.platform = Platforms;
 
     return this.gameRepository.save(game);
   }

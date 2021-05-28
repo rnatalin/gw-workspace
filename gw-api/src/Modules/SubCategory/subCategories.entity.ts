@@ -12,6 +12,7 @@ export class SubCategory {
   @Column()
   description: string;
 
-  @ManyToOne(() => Category, ({ subCategories }) => subCategories)
+  @ManyToOne(() => Category, ({ subCategories }) => subCategories, {cascade: true})
+  
   category: Category;
 }
